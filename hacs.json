@@ -5,5 +5,5 @@
     "homeassistant": "2023.3.0",
     "render_readme": true,
     "zip_release": true,
-    "country": "DK",
+    "country": "DK"
 }
