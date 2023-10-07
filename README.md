@@ -47,4 +47,5 @@ If you want to contribute to this please read the [Contribution guidelines](CONT
 [forum]: https://community.home-assistant.io/
 [license-shield]: https://img.shields.io/github/license/lerbaek/lectio.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-Kristoffer%20Lerbaek%20%40lerbaek-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/lerbaek/lectio.svg?style=for-the-badge
 [releases]: https://github.com/lerbaek/lectio/releases
