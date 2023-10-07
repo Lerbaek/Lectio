@@ -12,9 +12,9 @@ from homeassistant.helpers.update_coordinator import (
 from homeassistant.exceptions import ConfigEntryAuthFailed
 
 from .api import (
-    IntegrationBlueprintApiClient,
-    IntegrationBlueprintApiClientAuthenticationError,
-    IntegrationBlueprintApiClientError,
+    LectioApiClient,
+    LectioApiClientAuthenticationError,
+    LectioApiClientError,
 )
 from .const import DOMAIN, LOGGER
 
@@ -28,7 +28,7 @@ class BlueprintDataUpdateCoordinator(DataUpdateCoordinator):
     def __init__(
         self,
         hass: HomeAssistant,
-        client: IntegrationBlueprintApiClient,
+        client: LectioApiClient,
     ) -> None:
         """Initialize."""
         self.client = client
@@ -43,7 +43,7 @@ class BlueprintDataUpdateCoordinator(DataUpdateCoordinator):
         """Update data via library."""
         try:
             return await self.client.async_get_data()
-        except IntegrationBlueprintApiClientAuthenticationError as exception:
+        except LectioApiClientAuthenticationError as exception:
             raise ConfigEntryAuthFailed(exception) from exception
-        except IntegrationBlueprintApiClientError as exception:
+        except LectioApiClientError as exception:
             raise UpdateFailed(exception) from exception
